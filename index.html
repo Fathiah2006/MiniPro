@@ -117,7 +117,6 @@
             }
         }
  
-        /* RESPONSIVE DESIGN */
 @media (max-width: 480px) {
     .container{
         width:95%;
@@ -155,24 +154,34 @@
     .envelope{
         max-height:260px;
     }
+
+    video{
+    width:150px;  /* small circle */
 }
 
+@media (max-width:480px){
+    video{
+        width:200px;
+        height:200px;
+    }
+}
+
+}
         
     </style>
 </head>
 
 <body>
 
-    <!-- music -->
     <audio id="bgMusic" loop>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
 
     <div class="container">
-   <video width="150" height="150" autoplay muted loop
+<video width="150" height="150" autoplay muted loop
     style="border-radius:50%; border:3px solid white; object-fit:cover; margin-bottom:15px;">
     <source src="ourVideo.mp4" type="video/mp4">
-   </video>
+</video>
 
         <h2>❤️ Happy Valentine Ifemi ❤️</h2>
 

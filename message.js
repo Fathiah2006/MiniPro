@@ -48,5 +48,10 @@ function startLove() {
         }
         setInterval(createHeart, 400);
     
-        bgMusic.currentTime = 25; // start from 30 seconds
-bgMusic.play();
+    // your countdown code...
+    const music = document.getElementById("bgMusic");
+    
+    // Play after countdown/message appears
+    bgMusic.currentTime = 25; // optional: skip to 30s
+    bgMusic.volume = 0.7;     // adjust volume
+   bgMusic.play();

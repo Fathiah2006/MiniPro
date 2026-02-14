@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine My Love</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #ff4e8a, #ff9ecb);
+            overflow: hidden; 
+            text-align: center;
+            color: white;
+        }
+
+        /* floating hearts */
+        .heart {
+            position: absolute;
+            bottom: -20px;
+            font-size: 20px;
+            animation: float 6s linear infinite;
+        }
+ 
+        
+        @keyframes float {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 420px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        button {
+            background: white;
+            color: #ff4e8a;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* countdown */
+        .countdown {
+            font-size: 30px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* big name */
+        .big-name {
+            display: none;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 15px;
+            animation: pop 0.8s ease forwards;
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* envelope */
+       .envelope{
+    display:none;
+    margin-top:20px;
+    background:white;
+    color:#ff4e8a;
+    padding:15px;
+    border-radius:10px;
+    animation: openLetter 1s ease forwards;
+    gap: 10px;
+    max-height:200px;   /* controls height */
+    overflow-y:auto;    /* enables vertical scroll */
+}
+
+
+        @keyframes openLetter {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+ 
+        /* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+    .container{
+        width:95%;
+        padding:18px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    .big-name{
+        font-size:28px;
+    }
+
+    .countdown{
+        font-size:22px;
+    }
+
+    .envelope{
+        max-height:180px;
+        font-size:14px;
+    }
+
+    video{
+        width:100px;
+        height:100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container{
+        max-width:500px;
+    }
+
+    .envelope{
+        max-height:260px;
+    }
+}
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- music -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+   <video width="150" height="150" autoplay muted loop
+    style="border-radius:50%; border:3px solid white; object-fit:cover; margin-bottom:15px;">
+    <source src="ourVideo.mp4" type="video/mp4">
+   </video>
+
+        <h2>❤️ Happy Valentine Ifemi ❤️</h2>
+
+        <button id="loveBtn" onclick="startLove()">Click to read my heart</button>
+
+        <div class="countdown" id="countdown"></div>
+
+        <div class="big-name" id="bigName">IFEMI ❤️</div>
+
+        <div class="envelope" id="loveMessage">
+            <p>
+                Happy Valentine’s Day, my love.
+                I still can’t believe this is our first Valentine’s Day together. My heart is so full thinking about how lucky I am to
+                have you. You came into my life and made everything softer, warmer, and more beautiful than I ever imagined.
+                
+                
+                
+                Thank you for being my peace, my happiness, and my safe place. Thank you for choosing me, for caring for me, and for
+                loving me in ways that make me feel truly special. Every moment with you means more to me than I can explain.
+                
+                
+                
+                If this is how amazing our first Valentine is, I can’t wait to experience many more by your side. I pray we keep growing
+                together, loving deeper, and holding on to each other through everything.
+                
+                
+                Happy Valentine’s Day, once again my love.
+                
+                
+                
+                Loving you has been one of the most beautiful and meaningful parts of my life. You are my calm in chaos, my safe place,
+                the person who makes ordinary days feel special just by being in them. Every moment with you is a memory I carry in my
+                heart with gratitude.
+                
+                
+                
+                Thank you for loving me the way you do, for your patience, your strength, your kindness, and the little ways you show up
+                for me even when I don’t ask. With you, I feel chosen, valued, and protected.
+                
+                
+                
+                I pray life keeps us together, growing, laughing, learning, and building something lasting. No matter what comes our
+                way, my heart is yours, today and always.
+                
+        
+                I love you more than words can ever truly explain. ❤️❤️
+            </p>
+        </div>
+    </div>
+
+    <script src="message.js"></script>
+
+</body>
+
+</html>
